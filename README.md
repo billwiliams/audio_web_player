@@ -1,7 +1,7 @@
-audio_web_player
+Audio_web_player
 ================
 
-A very simple HTML5 audio player.
+A very simple HTML5 audio web player.
 
 You don't find your music on Grooveshark/Deezer/Spotify/.. ?
 You don't want to install/configure your own web based audio/video streaming like Subsonic or Ampache ?
@@ -18,6 +18,7 @@ With this you can :
 - History
 
 You may change :
+
 @index.php
 - The directory to scan $source = "sounds/";
 - The Regex scan extension '/^.+\.mp3$/i' to scan everything you want (like .ogg)
