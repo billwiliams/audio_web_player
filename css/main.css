@@ -1,0 +1,234 @@
+/* Eric Meyer's Reset CSS v2.0 - http://cssreset.com */
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{border:0;font-size:100%;font:inherit;vertical-align:baseline;margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}table{border-collapse:collapse;border-spacing:0}
+
+@font-face {
+    font-family: 'bpmonoregular';
+    src: url('BPmono-webfont.eot');
+    src: url('BPmono-webfont.eot?#iefix') format('embedded-opentype'),
+         url('BPmono-webfont.woff') format('woff'),
+         url('BPmono-webfont.ttf') format('truetype'),
+         url('BPmono-webfont.svg#bpmonoregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+html,
+body {
+    font-size: 1rem;
+    font-family: 'bpmonoregular', sans-serif;
+}
+body {
+    background: #555;
+}
+/*
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ ██▓▒░ CONTROL BAR ░▒▓██████████████████████████████████████████████████████ │
+└─────────────────────────────────────────────────────────────────────────────┘*/
+
+#controlBar {
+    width: 60%;
+    text-align: left;
+    display: inline-block;
+    float: left;
+    padding-left: 0.5rem;
+}
+#controlBar button {
+    font-family: 'bpmonoregular', sans-serif;
+    border: 0;
+    margin: 0;
+    padding: 0 0.5rem;
+    height: 1.5rem;
+    line-height: 1.5rem;
+    background-color: #CCC;
+    display: inline;
+    cursor: pointer;
+    display: inline-block;
+    border-radius: 0.25rem;
+    background-color: #f6f6f6;
+    margin-bottom: 0.5rem;
+    margin-right: 0.5rem;
+    float: left;
+}
+#controlBar #btnHistory {
+    background-image: url(history.svg);
+    background-size: 0.9rem auto;
+    background-position: 0.25rem center;
+    background-repeat: no-repeat;
+    padding-left: 1.4rem;
+    color: #999;
+}
+#controlBar #btnHistory.on{
+    color: inherit;
+}
+#controlBar #btnRandom {
+    color: #999;
+    background-image: url(audio_shuffle_off.svg);
+    background-size: 1.1rem auto;
+    background-position: 0.35rem center;
+    background-repeat: no-repeat;
+    padding-left: 1.6rem;
+}
+#controlBar #btnRandom.on{
+    background-image: url(audio_shuffle.svg);
+    color: inherit;
+}
+#controlBar #btnPrev {
+    background-image: url(audio_prev.svg);
+    background-size: 0.7rem auto;
+    background-position: 0.35rem center;
+    background-repeat: no-repeat;
+    padding-left: 1.3rem;
+}
+#controlBar #btnNext {
+    background-image: url(audio_next.svg);
+    background-size: 0.7rem auto;
+    background-position: center right 0.35rem;
+    background-repeat: no-repeat;
+    padding-right: 1.3rem;
+}
+/*
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ ██▓▒░ AUDiO PLAYER ░▒▓█████████████████████████████████████████████████████ │
+└─────────────────────────────────────────────────────────────────────────────┘*/
+
+audio#player {
+    display: block;
+    width: 100%;
+    background-color: #000;
+    margin: 0.5rem 0;
+}
+/*
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ ██▓▒░ SEARCH iNPUT ░▒▓█████████████████████████████████████████████████████ │
+└─────────────────────────────────────────────────────────────────────────────┘*/
+
+input.search {
+    font-family: 'bpmonoregular', sans-serif;
+    border: 0;
+    padding: 0 0.5rem;
+    margin-right: 0.5rem;
+    height: 1.5rem;
+    line-height: 1.5rem;
+    border-radius: 0.25rem;
+    width: 40%;
+    width: calc(40% - 0.5rem);
+    background-image: url(search_lookup.svg);
+    background-size: 0.8rem auto;
+    background-position: 0.35rem center;
+    background-repeat: no-repeat;
+    padding-left: 1.4rem;
+    display: block;
+    position: absolute;
+    top: -2rem;
+    right: 0;
+}
+/*
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ ██▓▒░ HEADER LiST MUSiC ░▒▓████████████████████████████████████████████████ │
+└─────────────────────────────────────────────────────────────────────────────┘*/
+#full_list{
+    width: 100%;
+}
+.titleCol {
+    background-color: #333;
+    color: #FFF;
+    height: 2rem;
+    line-height: 2rem;
+    font-size: 1.0rem;
+}
+.artist,
+span[data-sort="artist"] {
+    width: 25%;
+    height: 100%;
+    float: left;
+    overflow: hidden;
+    word-break: break-all;
+    padding: 0 1rem;
+}
+.album,
+span[data-sort="album"] {
+    width: 25%;
+    height: 100%;
+    float: left;
+    border-left: 1px solid rgba(0, 0, 0, 0.25);
+    padding: 0 1rem;
+    overflow: hidden;
+    word-break: break-all;
+}
+.title,
+span[data-sort="title"] {
+    width: 50%;
+    height: 100%;
+    float: left;
+    border-left: 1px solid rgba(0, 0, 0, 0.25);
+    padding: 0 1rem;
+    overflow: hidden;
+    word-break: break-all;
+}
+/*
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ ██▓▒░ LiST MUSiC ░▒▓███████████████████████████████████████████████████████ │
+└─────────────────────────────────────────────────────────────────────────────┘*/
+#container_list{
+    position: relative;
+    clear: both;
+}
+ul.list {
+    width: 100%;
+}
+ul.list li {
+    display: block;
+    width: 100%;
+    clear: both;
+    background: #CCC;
+    overflow: hidden;
+    height: 1.5rem;
+    line-height: 1.5rem;
+    font-size: 0.7rem;
+    cursor: pointer;
+}
+ul.list li:nth-child(even) {
+    background: #EEE;
+}
+ul.list li:hover {
+    background: #18ADF6;
+}
+ul.list li.playing {
+    background-color: #333;
+    box-shadow: 0 0 1rem #000 inset;
+    color: #FFF;
+    background-image: url(arrow_sans_right.svg), url(arrow_sans_left.svg);
+    background-size: auto 0.8rem;
+    background-position: left center, right center;
+    background-repeat: no-repeat;
+}
+/*
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ ██▓▒░ HiSTORY LiST MUSiC ░▒▓███████████████████████████████████████████████ │
+└─────────────────────────────────────────────────────────────────────────────┘*/
+
+#history_list {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.9);
+    width: 100%;
+    height: 100%;
+}
+#history_list.on {
+    display: block;
+}
+#history_list a.id{
+    display: none;
+}
+

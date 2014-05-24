@@ -11,6 +11,7 @@ There's no database, one mono playlist and no user account. A simple page that l
 
 It uses JQuery and List.js and requires PHP5.
 You should put an .htaccess to protect your data.
+You must store/rename your music in this order: sounds/artist/album/title.mp3
 
 With this you can :
 - Sort and search
@@ -26,3 +27,5 @@ You may change :
 @main.js
 - The maximum number of music to show per pages // page: 9999
 - History max // this.historyMax = 30;
+
+I'm not the author of "Hongdae". If you like it, you should visit http://www.lukhash.com
